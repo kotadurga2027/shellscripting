@@ -3,5 +3,5 @@
 number1=99
 number2=999
 
-SUM=$((NUMBER1+NUMBER2))
+SUM=$((number1+number2))
 echo "sum of $number1 and $number2 is : $SUM"
