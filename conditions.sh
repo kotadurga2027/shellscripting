@@ -24,7 +24,7 @@ else
    echo "Given Number $NUMBER is not equal to 10"
 fi
 
-if [ $NUMBER -nq 10 ]
+if [ $NUMBER -ne 10 ]
 then
    echo "Given Number $NUMBER is not equal to 10"
    
