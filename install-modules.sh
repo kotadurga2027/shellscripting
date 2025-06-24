@@ -16,6 +16,7 @@ then
       echo "Installing mysql is... sucsess"
    else
       echo "Installing my is ... fail"
+   fi
 else
    echo "Mysql is already isnatlled no action is pending"
    exit 1
