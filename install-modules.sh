@@ -1,17 +1,17 @@
 #!/bin/bash
 userid=(id -u)
-if [ $userid -ne 0]
+if [ $userid -ne 0 ]
 then
    echo "Error:: Please run with root access"
 else
    echo "You are running with root access"
 fi
 dnf list installed mysql
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
    echo "Mysql is not installed..... going to install the Mysql"
    dnf install mysql -y
-   if [ $? -eq 0]
+   if [ $? -eq 0 ]
    then
       echo "Installing mysql is... sucsess"
    else
