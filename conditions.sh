@@ -1,8 +1,9 @@
 #!/bin/bash
-number=$1
-if [$number -lt 10]
+NUMBER=$1
+if [$NUMBER -gt 10]
 then
-   echo "Given number $number is lessthen 10"
+   echo "Given Number $NUMBER is greater than 10"
+   
 else
-   echo "Given number $number is greaterthen 10"
+   echo "Given Number $NUMBER is lessthan 10"
 fi
