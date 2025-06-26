@@ -43,6 +43,7 @@ then
      dnf install python3 -y
      if [ $? -eq 0 ]
      validate $? "python3"
+     fi
 else
      echo "python3 is already installed and no action is pending"
 fi
