@@ -22,6 +22,7 @@ then
      dnf install mysql -y
      if [ $? -eq 0 ]
      validate $? "Mysql"
+     fi
 else
      echo "Mysql is already installed and no action is pending"
 fi
@@ -32,6 +33,7 @@ then
      dnf install nginx -y
      if [ $? -eq 0 ]
      validate $? "nginx"
+     fi
 else
      echo "Nginx is already installed and no action is pending"
 fi
