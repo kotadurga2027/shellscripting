@@ -8,7 +8,7 @@ else
    echo "You are running with root access"
 fi
 dnf list installed mysql
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then
    echo "Mysql is installed..... going to uninstall the Mysql"
    dnf remove mysql -y
