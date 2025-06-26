@@ -37,7 +37,7 @@ else
     echo "nginx is not installed no need to perform"
 fi
 
-dnf list installed python
+dnf list installed python3
 if [ $? -eq 0 ]
 then  
     echo "python is installed and we are going to uninstall"
