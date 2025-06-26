@@ -3,9 +3,11 @@ userid=$(id -u)
 if [ $userid -ne 0 ]
 then
     echo "Error:: you are running the script without root access"
+    exit 1
 else
     echo "You are running the script with root access"
-    exit 1
+fi
+    
 validate(){
     if [ $1 -eq 0 ]
     then
@@ -20,20 +22,18 @@ if [ $? -ne 0 ]
 then
      echo "Mysql is not nstalled... going to install"
      dnf install mysql -y
-     if [ $? -eq 0 ]
      validate $? "Mysql"
-     fi
+     
 else
-     echo "Mysql is already installed and no action is pending"
+    echo "Mysql is already installed and no action is pending"
 fi
 dnf list installed nginx
 if [ $? -ne 0 ]
 then
      echo "Nginx is not nstalled... going to install"
      dnf install nginx -y
-     if [ $? -eq 0 ]
      validate $? "nginx"
-     fi
+     
 else
      echo "Nginx is already installed and no action is pending"
 fi
@@ -43,9 +43,9 @@ if [ $? -ne 0 ]
 then
      echo "python3 is not nstalled... going to install"
      dnf install python3 -y
-     if [ $? -eq 0 ]
+     
      validate $? "python3"
-     fi
+     
 else
      echo "python3 is already installed and no action is pending"
 fi
